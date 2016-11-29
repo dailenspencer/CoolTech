@@ -1,0 +1,91 @@
+#NavBar {
+	position: fixed;
+	background-color:white;
+	display: inline-flex;
+	width:100%;
+	height:60px;
+	-webkit-box-shadow: 2px 4px 5px -3px #e2e2e2;
+    -moz-box-shadow: 2px 4px 5px -3px #e2e2e2;
+    box-shadow: 2px 4px 5px -3px #e2e2e2;
+    z-index:100;
+    box-sizing:border-box;
+    padding: 5px 20px 0px 20px;
+}
+
+#NavBarTitle {
+	line-height: 50px;
+	margin: 0px;
+	color: #63B5D0;
+}
+
+#NavBarNavigation {
+	display:inherit;
+	margin-left:30px;
+}
+
+#NavBarNavigation h2 {
+	margin:0px 10px 0px 10px;
+	line-height: 55px;
+	font-size:17px;
+	color: #BEBEBE;
+	cursor: pointer;
+}
+#NavBarNavigation h2:hover {
+	color:#616161;
+}
+
+#CountryImage {
+	width:20px;
+	height:20px;
+	position: absolute;
+	top:22px;
+	right:360px;
+	border: solid 1px #BEBEBE;
+	border-radius:50%;
+	cursor:pointer;
+}
+
+#NavBarContact {
+	position: absolute;
+	right:200px;
+	color: #BEBEBE;
+	top:18px;
+	height:30px;
+	box-sizing:border-box;
+	padding-top:5px;
+	border-right:solid 1px;
+}
+#NavBarContact h1 {
+	font-size:17px;
+	margin:0px;
+	padding-right:20px;
+	cursor:pointer;
+}
+
+#NavBarContact h1:hover {
+	color:#616161;
+}
+
+#NavLogInButton {
+	font-size:17px;
+	position: absolute;
+	right:135px;
+	margin:0px;
+	top:23px;
+	color: #BEBEBE;
+	cursor:pointer;
+}
+#NavLogInButton:hover {
+	color:#616161;
+}
+
+#NavShoppingCart {
+	position: absolute;
+	right:80px;
+	top:19px;
+	cursor: pointer;
+	
+}
+#NavShoppingCart img {
+	width:25px;
+}
