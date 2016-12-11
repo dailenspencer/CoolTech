@@ -1,10 +1,6 @@
-#landing-window {
-    height: 100%;
-    background: transparent;
-    position:relative;
-}
-
-
+/*#Landing, #landing-window {
+  top:-50px;
+}*/
 
 
 /*Down Arrow*/
@@ -73,3 +69,21 @@
   animation: bounce 2s infinite;
 }
 /***********************************/
+
+@media only screen and (max-width: 960px) {
+  #Landing, #landing-window {
+    height:379px;
+  }
+  .arrow {
+    bottom:270px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  #Landing, #landing-window {
+    height:303px;
+  }
+  .arrow {
+    bottom:340px;
+  }
+}

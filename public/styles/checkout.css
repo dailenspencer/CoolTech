@@ -1,0 +1,43 @@
+#CheckoutPage {
+	width:75%;
+	margin: 0 auto;
+	max-width:763.5px;
+	padding-top: 10px;
+}
+
+#CheckoutPage h1, h2 {
+	font-family: 'Roboto', sans-serif;
+  	font-weight: 300;
+  	
+}
+
+#CheckoutPage h1 {
+	font-size: 24px;
+}
+
+#CheckoutPage h2 {
+	font-size: 20px;
+}
+
+#CheckoutPage span {
+	color:white !important;
+}
+
+#CheckoutPage .form-input {
+	display: flex;
+	flex-direction:row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+#CheckoutPage .field {
+	flex-basis: 45%;
+	position: relative;
+}
+
+
+@media only screen and (max-width: 420px) {
+  #CheckoutPage .field {
+  	flex-basis: 100%;
+  }
+}

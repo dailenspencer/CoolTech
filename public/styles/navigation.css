@@ -3,24 +3,39 @@
 	background-color:white;
 	display: inline-flex;
 	width:100%;
-	height:60px;
+	height:100px;
 	-webkit-box-shadow: 2px 4px 5px -3px #e2e2e2;
     -moz-box-shadow: 2px 4px 5px -3px #e2e2e2;
     box-shadow: 2px 4px 5px -3px #e2e2e2;
     z-index:100;
     box-sizing:border-box;
-    padding: 5px 20px 0px 20px;
+    padding:20px;
+    opacity:0.75;
 }
 
-#NavBarTitle {
+#NavBarTitle, #MobileNavBarTitle {
+	display: flex;
+	justify-content:center;
+	align-items:center;
+	height: 100%;
+}
+
+#NavBarTitle,#MobileNavBarTitle {
 	line-height: 50px;
 	margin: 0px;
 	color: #63B5D0;
+	font-family: 'Raleway';
 }
 
+#NavBarTitle {
+	font-size: 36px;
+}
 #NavBarNavigation {
 	display:inherit;
 	margin-left:30px;
+	display: flex;
+	justify-content:center;
+	align-items:center;
 }
 
 #NavBarNavigation h2 {
@@ -38,31 +53,31 @@
 	width:20px;
 	height:20px;
 	position: absolute;
-	top:22px;
-	right:360px;
+	top:43px;
+	right:300px;
 	border: solid 1px #BEBEBE;
 	border-radius:50%;
 	cursor:pointer;
 }
 
-#NavBarContact {
+#NavBarPhone {
 	position: absolute;
-	right:200px;
+	right:130px;
 	color: #BEBEBE;
-	top:18px;
+	top:36px;
 	height:30px;
-	box-sizing:border-box;
 	padding-top:5px;
 	border-right:solid 1px;
+	left: initial;
 }
-#NavBarContact h1 {
+#NavBarPhone h1 {
 	font-size:17px;
 	margin:0px;
 	padding-right:20px;
 	cursor:pointer;
 }
 
-#NavBarContact h1:hover {
+#NavBarPhone h1:hover {
 	color:#616161;
 }
 
@@ -82,10 +97,85 @@
 #NavShoppingCart {
 	position: absolute;
 	right:80px;
-	top:19px;
 	cursor: pointer;
+	top: 38px;
 	
 }
 #NavShoppingCart img {
 	width:25px;
+	cursor: pointer;
+}
+
+
+
+/*Mobile*/
+#MobileNavNavigation {
+	display: flex;
+	width: 100%;
+	height: 100%;
+}
+#MobileNavSlideOut h1 {
+	font-size:24px;
+}
+
+#MobileNavMenuButton {
+	width:30px;
+	height: 30px;
+	position: absolute;
+	left:30px;
+	top:23px;
+	cursor: pointer;
+}
+
+#MobileNavBarTitle {
+	position: absolute;
+	left:50%;
+	top:50%;
+	transform:translateX(-50%) translateY(-50%);
+	margin:0px;
+	font-size: 34px;
+}
+
+#MobileNavShoppingCart {
+	position: absolute;
+	right: 30px;
+	width: 30px;
+	height: 30px;
+	top:23px;
+	cursor: pointer;
+}
+
+#MobileNavSlideOut {
+	position: fixed;
+	width:200px;
+	height: 100%;
+	top:0px;
+	left:-200px;
+	background-color: white;
+	z-index: 20;
+	padding-left: 10px;
+	box-sizing:border-box;
+}
+#MobileNavSlideOut h1 {
+	cursor: pointer;
+	-webkit-font-smoothing: subpixel-antialiased;
+}
+
+#MobileNavSlideOut img {
+	width: 20px;
+	height: 20px;
+	position: absolute;
+    top: 18px;
+    right: 20px;
+    cursor: pointer;
+}
+
+
+
+
+
+@media only screen and (max-width: 790px) {
+  #NavBar {
+    height:76px;
+  }
 }
