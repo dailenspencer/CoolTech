@@ -75,7 +75,7 @@
     height:379px;
   }
   .arrow {
-    bottom:270px;
+    display: none;
   }
 }
 
@@ -83,7 +83,5 @@
   #Landing, #landing-window {
     height:303px;
   }
-  .arrow {
-    bottom:340px;
-  }
+  
 }

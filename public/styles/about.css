@@ -1,0 +1,21 @@
+#about-window
+{
+    height: 100%;
+    background: transparent;
+    position:relative;
+}
+
+#about-window h1 {
+	text-align: center;
+	position: absolute;
+	left:50%;
+	transform:translateX(-50%);
+	top:120px;
+	width: 100%;
+	color: white;
+	line-height: 1.1;
+}
+
+#MeetTheCreator {
+	height:1000px;
+}

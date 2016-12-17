@@ -29,6 +29,7 @@
 
 #NavBarTitle {
 	font-size: 36px;
+	cursor: pointer;
 }
 #NavBarNavigation {
 	display:inherit;

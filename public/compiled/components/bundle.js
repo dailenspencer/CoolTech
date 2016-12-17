@@ -28774,13 +28774,25 @@
 	
 	var _App2 = _interopRequireDefault(_App);
 	
-	var _Home = __webpack_require__(278);
+	var _Home = __webpack_require__(552);
 	
 	var _Home2 = _interopRequireDefault(_Home);
 	
-	var _Checkout = __webpack_require__(311);
+	var _Checkout = __webpack_require__(559);
 	
 	var _Checkout2 = _interopRequireDefault(_Checkout);
+	
+	var _FAQ = __webpack_require__(560);
+	
+	var _FAQ2 = _interopRequireDefault(_FAQ);
+	
+	var _About = __webpack_require__(551);
+	
+	var _About2 = _interopRequireDefault(_About);
+	
+	var _Contact = __webpack_require__(563);
+	
+	var _Contact2 = _interopRequireDefault(_Contact);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -28791,7 +28803,12 @@
 	    _reactRouter.Route,
 	    { path: '/', component: _App2.default },
 	    _react2.default.createElement(_reactRouter.IndexRoute, { component: _Home2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: '/Checkout', component: _Checkout2.default })
+	    _react2.default.createElement(_reactRouter.Route, { path: '/OurMission', component: _Home2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: '/Reviews', component: _Home2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: '/Checkout', component: _Checkout2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: '/FAQ', component: _FAQ2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: '/About', component: _About2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: '/Contact', component: _Contact2.default })
 	  )
 	);
 
@@ -29258,111 +29275,7 @@
 	module.exports = keyOf;
 
 /***/ },
-/* 278 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(2);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _reactDom = __webpack_require__(33);
-	
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-	
-	var _reactScroll = __webpack_require__(279);
-	
-	var _reactScroll2 = _interopRequireDefault(_reactScroll);
-	
-	var _navigation = __webpack_require__(291);
-	
-	var _navigation2 = _interopRequireDefault(_navigation);
-	
-	var _Landing = __webpack_require__(293);
-	
-	var _Landing2 = _interopRequireDefault(_Landing);
-	
-	var _Technology = __webpack_require__(546);
-	
-	var _Technology2 = _interopRequireDefault(_Technology);
-	
-	var _StarryBreaker = __webpack_require__(306);
-	
-	var _StarryBreaker2 = _interopRequireDefault(_StarryBreaker);
-	
-	var _ReviewSection = __webpack_require__(307);
-	
-	var _ReviewSection2 = _interopRequireDefault(_ReviewSection);
-	
-	var _MissionSection = __webpack_require__(308);
-	
-	var _MissionSection2 = _interopRequireDefault(_MissionSection);
-	
-	var _Footer = __webpack_require__(309);
-	
-	var _Footer2 = _interopRequireDefault(_Footer);
-	
-	var _Guarantee = __webpack_require__(310);
-	
-	var _Guarantee2 = _interopRequireDefault(_Guarantee);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var Home = function (_React$Component) {
-	  _inherits(Home, _React$Component);
-	
-	  function Home(props) {
-	    _classCallCheck(this, Home);
-	
-	    var _this = _possibleConstructorReturn(this, (Home.__proto__ || Object.getPrototypeOf(Home)).call(this, props));
-	
-	    _this.state = {};
-	    return _this;
-	  }
-	
-	  _createClass(Home, [{
-	    key: 'componentDidMount',
-	    value: function componentDidMount() {}
-	  }, {
-	    key: 'componentWillUnmount',
-	    value: function componentWillUnmount() {
-	      [].forEach.call(document.querySelectorAll('.parallax-mirror'), function (e) {
-	        e.parentNode.removeChild(e);
-	      });
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
-	        { id: 'MainBody' },
-	        _react2.default.createElement(_navigation2.default, null),
-	        _react2.default.createElement(_Landing2.default, null),
-	        _react2.default.createElement(_MissionSection2.default, null),
-	        _react2.default.createElement(_StarryBreaker2.default, null),
-	        _react2.default.createElement(_Guarantee2.default, null),
-	        _react2.default.createElement(_Technology2.default, null),
-	        _react2.default.createElement(_ReviewSection2.default, null),
-	        _react2.default.createElement(_Footer2.default, null)
-	      );
-	    }
-	  }]);
-	
-	  return Home;
-	}(_react2.default.Component);
-	
-	module.exports = Home;
-
-/***/ },
+/* 278 */,
 /* 279 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -30161,252 +30074,7 @@
 
 
 /***/ },
-/* 291 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(2);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _reactRouter = __webpack_require__(209);
-	
-	var _jqueryHelpers = __webpack_require__(292);
-	
-	var jqueryHelpers = _interopRequireWildcard(_jqueryHelpers);
-	
-	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var Navigation = function (_React$Component) {
-		_inherits(Navigation, _React$Component);
-	
-		function Navigation(props) {
-			_classCallCheck(this, Navigation);
-	
-			var _this = _possibleConstructorReturn(this, (Navigation.__proto__ || Object.getPrototypeOf(Navigation)).call(this, props));
-	
-			_this.state = {
-				screenWidth: $(document).width()
-			};
-			return _this;
-		}
-	
-		_createClass(Navigation, [{
-			key: 'componentDidMount',
-			value: function componentDidMount() {
-				var that = this;
-				window.addEventListener("resize", function () {
-					that.setState({ screenWidth: $(document).width() });
-				});
-			}
-		}, {
-			key: 'scrollToShop',
-			value: function scrollToShop() {
-				$('html,body').animate({
-					scrollTop: $("#BookAnEvent").offset().top }, 2000);
-			}
-		}, {
-			key: 'scrollToReviews',
-			value: function scrollToReviews() {
-				$('html,body').animate({
-					scrollTop: $("#Events").offset().top }, 2000);
-			}
-		}, {
-			key: 'handleCartClick',
-			value: function handleCartClick() {
-				_reactRouter.browserHistory.push('/Checkout');
-			}
-		}, {
-			key: 'handleMobileNavClick',
-			value: function handleMobileNavClick() {
-				this.handleCloseMobileNav();
-			}
-		}, {
-			key: 'handleMobileMenuClick',
-			value: function handleMobileMenuClick() {
-				$("#MobileNavSlideOut").animate({
-					left: '0px'
-				}, 200, function () {
-					// Animation complete.
-				});
-			}
-		}, {
-			key: 'handleCloseMobileNav',
-			value: function handleCloseMobileNav() {
-				$("#MobileNavSlideOut").animate({
-					left: '-200px'
-				}, 200, function () {
-					// Animation complete.
-				});
-			}
-		}, {
-			key: 'getMainNav',
-			value: function getMainNav() {
-				var _this2 = this;
-	
-				return _react2.default.createElement(
-					'div',
-					{ id: 'NavBar' },
-					_react2.default.createElement(
-						'h1',
-						{ id: 'NavBarTitle' },
-						'CoolTech'
-					),
-					_react2.default.createElement(
-						'div',
-						{ id: 'NavBarNavigation' },
-						_react2.default.createElement(
-							'h2',
-							{ onClick: function onClick() {
-									return scrollToShop();
-								} },
-							'Shop'
-						),
-						_react2.default.createElement(
-							'h2',
-							{ onClick: function onClick() {
-									return scrollToAbout();
-								} },
-							'About'
-						),
-						_react2.default.createElement(
-							'h2',
-							{ onClick: function onClick() {
-									return scrollToReviews();
-								} },
-							'Reviews'
-						)
-					),
-					_react2.default.createElement(
-						'div',
-						{ id: 'NavBarRight' },
-						_react2.default.createElement(
-							'div',
-							{ id: 'CountryImage' },
-							_react2.default.createElement('img', { src: '' })
-						),
-						_react2.default.createElement(
-							'div',
-							{ id: 'NavBarPhone' },
-							_react2.default.createElement(
-								'h1',
-								null,
-								'+1 850-276-9677'
-							)
-						),
-						_react2.default.createElement(
-							'div',
-							{ id: 'NavShoppingCart', onClick: function onClick() {
-									return _this2.handleCartClick();
-								} },
-							_react2.default.createElement('img', { src: '/images/shopping-cart.png' })
-						)
-					)
-				);
-			}
-		}, {
-			key: 'getMobileNav',
-			value: function getMobileNav() {
-				var _this3 = this;
-	
-				return _react2.default.createElement(
-					'div',
-					{ id: 'NavBar' },
-					_react2.default.createElement('img', { id: 'MobileNavMenuButton', onClick: function onClick() {
-							return _this3.handleMobileMenuClick();
-						}, src: 'images/menu-button.png' }),
-					_react2.default.createElement(
-						'h1',
-						{ id: 'MobileNavBarTitle' },
-						'CoolTech'
-					),
-					_react2.default.createElement('img', { id: 'MobileNavShoppingCart', src: 'images/shopping-cart.png', onClick: function onClick() {
-							return _this3.handleCartClick();
-						} }),
-					_react2.default.createElement(
-						'div',
-						{ id: 'MobileNavSlideOut' },
-						_react2.default.createElement(
-							'h1',
-							{ onClick: function onClick() {
-									return _this3.handleMobileNavClick("/");
-								} },
-							'HOME'
-						),
-						_react2.default.createElement(
-							'h1',
-							{ onClick: function onClick() {
-									return _this3.handleMobileNavClick("/shop");
-								} },
-							'SHOP'
-						),
-						_react2.default.createElement(
-							'h1',
-							{ onClick: function onClick() {
-									return _this3.handleMobileNavClick("/contact");
-								} },
-							'CONTACT'
-						),
-						_react2.default.createElement('img', { src: 'images/cancel.png', onClick: function onClick() {
-								return _this3.handleCloseMobileNav();
-							} })
-					)
-				);
-			}
-		}, {
-			key: 'handleMobileNavClick',
-			value: function handleMobileNavClick(view) {
-				this.changeView(view);
-				this.handleCloseMobileNav();
-			}
-		}, {
-			key: 'handleMobileMenuClick',
-			value: function handleMobileMenuClick() {
-				$("#MobileNavSlideOut").animate({
-					left: '0px'
-				}, 200, function () {
-					// Animation complete.
-				});
-			}
-		}, {
-			key: 'handleCloseMobileNav',
-			value: function handleCloseMobileNav() {
-				$("#MobileNavSlideOut").animate({
-					left: '-200px'
-				}, 200, function () {
-					// Animation complete.
-				});
-			}
-		}, {
-			key: 'render',
-			value: function render() {
-				var navigation = this.getMainNav();
-				if (jqueryHelpers.isMobile() || this.state.screenWidth <= 790) {
-					navigation = this.getMobileNav();
-				}
-				return navigation;
-			}
-		}]);
-	
-		return Navigation;
-	}(_react2.default.Component);
-	
-	;
-	
-	module.exports = Navigation;
-
-/***/ },
+/* 291 */,
 /* 292 */
 /***/ function(module, exports) {
 
@@ -30424,75 +30092,7 @@
 	}
 
 /***/ },
-/* 293 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(2);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _reactDom = __webpack_require__(33);
-	
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-	
-	var _ReactCSSTransitionGroup = __webpack_require__(294);
-	
-	var _ReactCSSTransitionGroup2 = _interopRequireDefault(_ReactCSSTransitionGroup);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var Landing = function (_React$Component) {
-	  _inherits(Landing, _React$Component);
-	
-	  function Landing(props) {
-	    _classCallCheck(this, Landing);
-	
-	    var _this = _possibleConstructorReturn(this, (Landing.__proto__ || Object.getPrototypeOf(Landing)).call(this, props));
-	
-	    _this.state = {};
-	    return _this;
-	  }
-	
-	  _createClass(Landing, [{
-	    key: 'componentDidMount',
-	    value: function componentDidMount() {
-	      $('#landing-window').parallax({
-	        imageSrc: 'images/girlonbed.jpeg'
-	      });
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	
-	      return _react2.default.createElement(
-	        'div',
-	        { id: 'Landing' },
-	        _react2.default.createElement(
-	          'div',
-	          { id: "landing-window", 'data-parallax': "scroll", 'data-position': "top", 'data-bleed': "10", 'data-image-src': "images/rage.jpg", 'data-natural-width': "1400", 'data-natural-height': "900" },
-	          _react2.default.createElement('div', { 'class': 'parallax-slider' })
-	        ),
-	        _react2.default.createElement('div', { className: 'arrow bounce', id: 'arrowbounce' })
-	      );
-	    }
-	  }]);
-	
-	  return Landing;
-	}(_react2.default.Component);
-	
-	module.exports = Landing;
-
-/***/ },
+/* 293 */,
 /* 294 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -32526,261 +32126,9 @@
 
 /***/ },
 /* 305 */,
-/* 306 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(2);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _reactDom = __webpack_require__(33);
-	
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-	
-	var _ReactCSSTransitionGroup = __webpack_require__(294);
-	
-	var _ReactCSSTransitionGroup2 = _interopRequireDefault(_ReactCSSTransitionGroup);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var StarryBreaker = function (_React$Component) {
-	  _inherits(StarryBreaker, _React$Component);
-	
-	  function StarryBreaker(props) {
-	    _classCallCheck(this, StarryBreaker);
-	
-	    var _this = _possibleConstructorReturn(this, (StarryBreaker.__proto__ || Object.getPrototypeOf(StarryBreaker)).call(this, props));
-	
-	    _this.state = {};
-	    return _this;
-	  }
-	
-	  _createClass(StarryBreaker, [{
-	    key: 'componentDidMount',
-	    value: function componentDidMount() {
-	      $('#starry-breaker-window').parallax({
-	        imageSrc: 'images/coffee-cup-bed-bedroom.jpeg'
-	      });
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	
-	      return _react2.default.createElement(
-	        'div',
-	        { id: 'StarryBreaker' },
-	        _react2.default.createElement(
-	          'div',
-	          { id: "starry-breaker-window", 'data-parallax': "scroll", 'data-position': "top", 'data-bleed': "10", 'data-natural-width': "1400", 'data-natural-height': "900" },
-	          _react2.default.createElement('div', { 'class': 'parallax-slider' })
-	        )
-	      );
-	    }
-	  }]);
-	
-	  return StarryBreaker;
-	}(_react2.default.Component);
-	
-	module.exports = StarryBreaker;
-
-/***/ },
-/* 307 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(2);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _reactDom = __webpack_require__(33);
-	
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var ReviewSection = function (_React$Component) {
-	  _inherits(ReviewSection, _React$Component);
-	
-	  function ReviewSection(props) {
-	    _classCallCheck(this, ReviewSection);
-	
-	    var _this = _possibleConstructorReturn(this, (ReviewSection.__proto__ || Object.getPrototypeOf(ReviewSection)).call(this, props));
-	
-	    _this.state = {};
-	    return _this;
-	  }
-	
-	  _createClass(ReviewSection, [{
-	    key: 'componentDidMount',
-	    value: function componentDidMount() {}
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      var reviewText = "Ali Dakota was created on Kauai by founder and artist Jill Smith. She came across the art of eco-printing, the process of imprinting Mother Nature’s flora onto fabrics. She instantly knew this was a form of art she could take with her while she traveled the world with her family. Through thoughtful design and the alchemy of the natural world, each piece Jill creates is one-of-a-kind.";
-	      return _react2.default.createElement(
-	        'div',
-	        { id: 'ReviewSection' },
-	        _react2.default.createElement(
-	          'h1',
-	          { id: 'ReviewTitle' },
-	          'Join The Community'
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'ReviewHolder' },
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'Review' },
-	            _react2.default.createElement('div', { className: 'ReviewImage', style: { 'backgroundImage': "url('images/girlsface.jpg')" } }),
-	            _react2.default.createElement(
-	              'h1',
-	              null,
-	              'Mary Ann'
-	            ),
-	            _react2.default.createElement(
-	              'p1',
-	              null,
-	              reviewText
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'Review' },
-	            _react2.default.createElement('div', { className: 'ReviewImage', style: { 'backgroundImage': "url('images/girlsface.jpg')" } }),
-	            _react2.default.createElement(
-	              'h1',
-	              null,
-	              'Mary Ann'
-	            ),
-	            _react2.default.createElement(
-	              'p1',
-	              null,
-	              reviewText
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'Review' },
-	            _react2.default.createElement('div', { className: 'ReviewImage', style: { 'backgroundImage': "url('images/girlsface.jpg')" } }),
-	            _react2.default.createElement(
-	              'h1',
-	              null,
-	              'Mary Ann'
-	            ),
-	            _react2.default.createElement(
-	              'p1',
-	              null,
-	              reviewText
-	            )
-	          )
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { id: 'ViewReviews' },
-	          'Read More Reviews'
-	        )
-	      );
-	    }
-	  }]);
-	
-	  return ReviewSection;
-	}(_react2.default.Component);
-	
-	module.exports = ReviewSection;
-
-/***/ },
-/* 308 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(2);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _reactDom = __webpack_require__(33);
-	
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var MissionSection = function (_React$Component) {
-	  _inherits(MissionSection, _React$Component);
-	
-	  function MissionSection(props) {
-	    _classCallCheck(this, MissionSection);
-	
-	    var _this = _possibleConstructorReturn(this, (MissionSection.__proto__ || Object.getPrototypeOf(MissionSection)).call(this, props));
-	
-	    _this.state = {};
-	    return _this;
-	  }
-	
-	  _createClass(MissionSection, [{
-	    key: 'render',
-	    value: function render() {
-	      var headerBeginning = "N A T U R E ' S";
-	      var headerEnd = "F I N G E R P R I N T";
-	      var paragraphOne = "Ali Dakota was created on Kauai by founder and artist Jill Smith. She came across the art of eco-printing, the process of imprinting Mother Nature’s flora onto fabrics. She instantly knew this was a form of art she could take with her while she traveled the world with her family. Through thoughtful design and the alchemy of the natural world, each piece Jill creates is one-of-a-kind.";
-	      var paragraphTwo = "The line brings together the love of nature, exploration, adventure, and art. Jills artistic process is rooted in gratitude and offers you a sense of grounded energy as you walk your path. Ali Dakota is sustainably crafted in Los Angeles, using Jill's naturally hand-printed fabric and up-cycled remnants from airplane seat leather. In a world of disposable fashion, Ali Dakota offers a quality product meant to last.";
-	      return _react2.default.createElement(
-	        'div',
-	        { id: 'MissionSection' },
-	        _react2.default.createElement(
-	          'h1',
-	          null,
-	          headerBeginning,
-	          '\xA0 \xA0',
-	          headerEnd
-	        ),
-	        _react2.default.createElement(
-	          'p1',
-	          null,
-	          paragraphOne,
-	          _react2.default.createElement('br', null)
-	        ),
-	        _react2.default.createElement(
-	          'p1',
-	          null,
-	          paragraphTwo
-	        )
-	      );
-	    }
-	  }]);
-	
-	  return MissionSection;
-	}(_react2.default.Component);
-	
-	module.exports = MissionSection;
-
-/***/ },
+/* 306 */,
+/* 307 */,
+/* 308 */,
 /* 309 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -32795,6 +32143,8 @@
 	var _reactDom = __webpack_require__(33);
 	
 	var _reactDom2 = _interopRequireDefault(_reactDom);
+	
+	var _reactRouter = __webpack_require__(209);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -32817,8 +32167,15 @@
 	  }
 	
 	  _createClass(Footer, [{
+	    key: 'changeView',
+	    value: function changeView(view) {
+	      _reactRouter.browserHistory.push(view);
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
+	      var _this2 = this;
+	
 	      return _react2.default.createElement(
 	        'div',
 	        { id: 'Footer' },
@@ -32841,12 +32198,16 @@
 	          { id: 'FooterNavigation' },
 	          _react2.default.createElement(
 	            'h1',
-	            null,
+	            { onClick: function onClick() {
+	                return _this2.changeView('About');
+	              } },
 	            'About'
 	          ),
 	          _react2.default.createElement(
 	            'h1',
-	            null,
+	            { onClick: function onClick() {
+	                return _this2.changeView('FAQ');
+	              } },
 	            'FAQ'
 	          ),
 	          _react2.default.createElement(
@@ -32866,7 +32227,9 @@
 	          ),
 	          _react2.default.createElement(
 	            'h1',
-	            null,
+	            { onClick: function onClick() {
+	                return _this2.changeView('Contact');
+	              } },
 	            'Contact'
 	          )
 	        ),
@@ -32914,333 +32277,8 @@
 	module.exports = Footer;
 
 /***/ },
-/* 310 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(2);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _reactDom = __webpack_require__(33);
-	
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-	
-	var _ReactCSSTransitionGroup = __webpack_require__(294);
-	
-	var _ReactCSSTransitionGroup2 = _interopRequireDefault(_ReactCSSTransitionGroup);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var Guarantee = function (_React$Component) {
-	  _inherits(Guarantee, _React$Component);
-	
-	  function Guarantee(props) {
-	    _classCallCheck(this, Guarantee);
-	
-	    var _this = _possibleConstructorReturn(this, (Guarantee.__proto__ || Object.getPrototypeOf(Guarantee)).call(this, props));
-	
-	    _this.state = {};
-	    return _this;
-	  }
-	
-	  _createClass(Guarantee, [{
-	    key: 'componentDidMount',
-	    value: function componentDidMount() {}
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
-	        { id: "guarantees" },
-	        _react2.default.createElement(
-	          'div',
-	          { id: 'GuaranteesHolder' },
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'guarantee' },
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'guaranteeImage' },
-	              _react2.default.createElement('img', { src: 'images/calendar.png' })
-	            ),
-	            _react2.default.createElement(
-	              'h1',
-	              null,
-	              'No-Risk 365 Night Trial'
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'guarantee' },
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'guaranteeImage' },
-	              _react2.default.createElement('img', { src: 'images/trolley.png' })
-	            ),
-	            _react2.default.createElement(
-	              'h1',
-	              null,
-	              'Free Shipping & Returns'
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'guarantee' },
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'guaranteeImage' },
-	              _react2.default.createElement('img', { src: 'images/clipboard.png' })
-	            ),
-	            _react2.default.createElement(
-	              'h1',
-	              null,
-	              '10-Year Warranty'
-	            )
-	          )
-	        )
-	      );
-	    }
-	  }]);
-	
-	  return Guarantee;
-	}(_react2.default.Component);
-	
-	module.exports = Guarantee;
-
-/***/ },
-/* 311 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(2);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _reactDom = __webpack_require__(33);
-	
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-	
-	var _MuiThemeProvider = __webpack_require__(312);
-	
-	var _MuiThemeProvider2 = _interopRequireDefault(_MuiThemeProvider);
-	
-	var _TextField = __webpack_require__(459);
-	
-	var _TextField2 = _interopRequireDefault(_TextField);
-	
-	var _SelectField = __webpack_require__(479);
-	
-	var _SelectField2 = _interopRequireDefault(_SelectField);
-	
-	var _MenuItem = __webpack_require__(537);
-	
-	var _MenuItem2 = _interopRequireDefault(_MenuItem);
-	
-	var _RaisedButton = __webpack_require__(538);
-	
-	var _RaisedButton2 = _interopRequireDefault(_RaisedButton);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var Checkout = function (_React$Component) {
-	  _inherits(Checkout, _React$Component);
-	
-	  function Checkout(props) {
-	    _classCallCheck(this, Checkout);
-	
-	    var _this = _possibleConstructorReturn(this, (Checkout.__proto__ || Object.getPrototypeOf(Checkout)).call(this, props));
-	
-	    _this.state = {
-	      exp_month_value: ''
-	    };
-	    return _this;
-	  }
-	
-	  _createClass(Checkout, [{
-	    key: 'handleExpMonthChange',
-	    value: function handleExpMonthChange(event, index, value) {
-	      this.setState({ exp_month_value: value });
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      var _this2 = this;
-	
-	      return _react2.default.createElement(
-	        'div',
-	        { id: 'CheckoutPage' },
-	        _react2.default.createElement(
-	          'form',
-	          { action: '/your-charge-code', method: 'POST', id: 'payment-form' },
-	          _react2.default.createElement('span', { className: 'payment-errors' }),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'form-row' },
-	            _react2.default.createElement(
-	              'h1',
-	              null,
-	              '1. Contact Details'
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'form-input' },
-	              _react2.default.createElement(
-	                _MuiThemeProvider2.default,
-	                null,
-	                _react2.default.createElement(_TextField2.default, { hintText: 'Email', 'data-stripe': 'number' })
-	              )
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'form-row' },
-	            _react2.default.createElement(
-	              'h1',
-	              null,
-	              '2. Shipping Address'
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'form-input' },
-	              _react2.default.createElement(
-	                _MuiThemeProvider2.default,
-	                null,
-	                _react2.default.createElement(_TextField2.default, { hintText: 'Street', 'data-stripe': 'number' })
-	              ),
-	              _react2.default.createElement(
-	                _MuiThemeProvider2.default,
-	                null,
-	                _react2.default.createElement(_TextField2.default, { hintText: 'City', 'data-stripe': 'number' })
-	              ),
-	              _react2.default.createElement(
-	                _MuiThemeProvider2.default,
-	                null,
-	                _react2.default.createElement(_TextField2.default, { hintText: 'State', 'data-stripe': 'number' })
-	              ),
-	              _react2.default.createElement(
-	                _MuiThemeProvider2.default,
-	                null,
-	                _react2.default.createElement(_TextField2.default, { hintText: 'Zipcode', type: 'text', size: '6', 'data-stripe': 'address_zip' })
-	              )
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'form-row' },
-	            _react2.default.createElement(
-	              'h1',
-	              null,
-	              '3. Payment Method'
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'form-input' },
-	              _react2.default.createElement(
-	                _MuiThemeProvider2.default,
-	                null,
-	                _react2.default.createElement(_TextField2.default, { hintText: 'Name', 'data-stripe': 'number' })
-	              ),
-	              _react2.default.createElement(
-	                _MuiThemeProvider2.default,
-	                null,
-	                _react2.default.createElement(_TextField2.default, { hintText: 'Card Number', type: 'text', size: '20', 'data-stripe': 'number' })
-	              ),
-	              _react2.default.createElement(
-	                _MuiThemeProvider2.default,
-	                null,
-	                _react2.default.createElement(
-	                  _SelectField2.default,
-	                  {
-	                    hintText: 'Expiration Month',
-	                    value: this.state.exp_month_value,
-	                    onChange: function onChange() {
-	                      return _this2.handleExpMonthChange();
-	                    },
-	                    maxHeight: 150,
-	                    type: 'text', size: '2', 'data-stripe': 'exp_month'
-	                  },
-	                  _react2.default.createElement(_MenuItem2.default, { value: 1, primaryText: 'Jan(01)' }),
-	                  _react2.default.createElement(_MenuItem2.default, { value: 2, primaryText: 'Feb(02)' }),
-	                  _react2.default.createElement(_MenuItem2.default, { value: 3, primaryText: 'Mar(03)' }),
-	                  _react2.default.createElement(_MenuItem2.default, { value: 4, primaryText: 'Apr(04)' }),
-	                  _react2.default.createElement(_MenuItem2.default, { value: 5, primaryText: 'May(05)' }),
-	                  _react2.default.createElement(_MenuItem2.default, { value: 1, primaryText: 'June(06)' }),
-	                  _react2.default.createElement(_MenuItem2.default, { value: 2, primaryText: 'July(07)' }),
-	                  _react2.default.createElement(_MenuItem2.default, { value: 3, primaryText: 'Aug(08)' }),
-	                  _react2.default.createElement(_MenuItem2.default, { value: 4, primaryText: 'Sep(09)' }),
-	                  _react2.default.createElement(_MenuItem2.default, { value: 5, primaryText: 'Oct(10)' }),
-	                  _react2.default.createElement(_MenuItem2.default, { value: 5, primaryText: 'Nov(11)' }),
-	                  _react2.default.createElement(_MenuItem2.default, { value: 5, primaryText: 'Dec(12)' })
-	                )
-	              ),
-	              _react2.default.createElement(
-	                _MuiThemeProvider2.default,
-	                null,
-	                _react2.default.createElement(
-	                  _SelectField2.default,
-	                  {
-	                    hintText: 'Expiration Year',
-	                    value: this.state.exp_month_value,
-	                    onChange: function onChange() {
-	                      return _this2.handleExpMonthChange();
-	                    },
-	                    maxHeight: 150,
-	                    type: 'text', size: '2', 'data-stripe': 'exp_year'
-	                  },
-	                  _react2.default.createElement(_MenuItem2.default, { value: 1, primaryText: '2016' }),
-	                  _react2.default.createElement(_MenuItem2.default, { value: 2, primaryText: '2017' }),
-	                  _react2.default.createElement(_MenuItem2.default, { value: 3, primaryText: '2018' }),
-	                  _react2.default.createElement(_MenuItem2.default, { value: 4, primaryText: '2019' }),
-	                  _react2.default.createElement(_MenuItem2.default, { value: 5, primaryText: '2020' }),
-	                  _react2.default.createElement(_MenuItem2.default, { value: 1, primaryText: '2021' }),
-	                  _react2.default.createElement(_MenuItem2.default, { value: 2, primaryText: '2022' }),
-	                  _react2.default.createElement(_MenuItem2.default, { value: 3, primaryText: '2023' }),
-	                  _react2.default.createElement(_MenuItem2.default, { value: 4, primaryText: '2024' }),
-	                  _react2.default.createElement(_MenuItem2.default, { value: 5, primaryText: '2026' })
-	                )
-	              ),
-	              _react2.default.createElement(
-	                _MuiThemeProvider2.default,
-	                null,
-	                _react2.default.createElement(_TextField2.default, { hintText: 'Security Code', type: 'text', size: '4', 'data-stripe': 'cvc' })
-	              )
-	            )
-	          ),
-	          _react2.default.createElement(
-	            _MuiThemeProvider2.default,
-	            null,
-	            _react2.default.createElement(_RaisedButton2.default, { label: 'Place Your Order', backgroundColor: '#5CB85C', style: { 'textColor': '#ffffff', 'color': '#ffffff' } })
-	          )
-	        )
-	      );
-	    }
-	  }]);
-	
-	  return Checkout;
-	}(_react2.default.Component);
-	
-	module.exports = Checkout;
-
-/***/ },
+/* 310 */,
+/* 311 */,
 /* 312 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -51396,7 +50434,563 @@
 
 
 /***/ },
-/* 546 */
+/* 546 */,
+/* 547 */,
+/* 548 */,
+/* 549 */,
+/* 550 */,
+/* 551 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(2);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(33);
+	
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+	
+	var _ReactCSSTransitionGroup = __webpack_require__(294);
+	
+	var _ReactCSSTransitionGroup2 = _interopRequireDefault(_ReactCSSTransitionGroup);
+	
+	var _Navigation = __webpack_require__(553);
+	
+	var _Navigation2 = _interopRequireDefault(_Navigation);
+	
+	var _Footer = __webpack_require__(309);
+	
+	var _Footer2 = _interopRequireDefault(_Footer);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var About = function (_React$Component) {
+	  _inherits(About, _React$Component);
+	
+	  function About(props) {
+	    _classCallCheck(this, About);
+	
+	    var _this = _possibleConstructorReturn(this, (About.__proto__ || Object.getPrototypeOf(About)).call(this, props));
+	
+	    _this.state = {};
+	    return _this;
+	  }
+	
+	  _createClass(About, [{
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      $('#about-window').parallax({
+	        imageSrc: 'images/city-road-people-street.jpg'
+	      });
+	      $(window).scrollTop(0, 0);
+	    }
+	  }, {
+	    key: 'componentWillUnmount',
+	    value: function componentWillUnmount() {
+	      [].forEach.call(document.querySelectorAll('.parallax-mirror'), function (e) {
+	        e.parentNode.removeChild(e);
+	      });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var meetTheCreatorText = "";
+	      return _react2.default.createElement(
+	        'div',
+	        { id: 'MainBody' },
+	        _react2.default.createElement(_Navigation2.default, null),
+	        _react2.default.createElement(
+	          'div',
+	          { id: 'About' },
+	          _react2.default.createElement(
+	            'div',
+	            { id: "about-window", 'data-parallax': "scroll", 'data-position': "top", 'data-bleed': "10", 'data-image-src': "images/rage.jpg", 'data-natural-width': "1400", 'data-natural-height': "900" },
+	            _react2.default.createElement(
+	              'div',
+	              { 'class': 'parallax-slider' },
+	              _react2.default.createElement(
+	                'h1',
+	                null,
+	                'Small Beginnings'
+	              )
+	            )
+	          ),
+	          _react2.default.createElement('div', { className: 'arrow bounce', id: 'arrowbounce' })
+	        ),
+	        _react2.default.createElement(_Footer2.default, null)
+	      );
+	    }
+	  }]);
+	
+	  return About;
+	}(_react2.default.Component);
+	
+	module.exports = About;
+
+/***/ },
+/* 552 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(2);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(33);
+	
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+	
+	var _reactScroll = __webpack_require__(279);
+	
+	var _reactScroll2 = _interopRequireDefault(_reactScroll);
+	
+	var _Navigation = __webpack_require__(553);
+	
+	var _Navigation2 = _interopRequireDefault(_Navigation);
+	
+	var _Landing = __webpack_require__(554);
+	
+	var _Landing2 = _interopRequireDefault(_Landing);
+	
+	var _Technology = __webpack_require__(555);
+	
+	var _Technology2 = _interopRequireDefault(_Technology);
+	
+	var _ImageBreaker = __webpack_require__(556);
+	
+	var _ImageBreaker2 = _interopRequireDefault(_ImageBreaker);
+	
+	var _MissionSection = __webpack_require__(562);
+	
+	var _MissionSection2 = _interopRequireDefault(_MissionSection);
+	
+	var _Guarantee = __webpack_require__(557);
+	
+	var _Guarantee2 = _interopRequireDefault(_Guarantee);
+	
+	var _ReviewSection = __webpack_require__(558);
+	
+	var _ReviewSection2 = _interopRequireDefault(_ReviewSection);
+	
+	var _Footer = __webpack_require__(309);
+	
+	var _Footer2 = _interopRequireDefault(_Footer);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Home = function (_React$Component) {
+	  _inherits(Home, _React$Component);
+	
+	  function Home(props) {
+	    _classCallCheck(this, Home);
+	
+	    var _this = _possibleConstructorReturn(this, (Home.__proto__ || Object.getPrototypeOf(Home)).call(this, props));
+	
+	    _this.state = {};
+	    return _this;
+	  }
+	
+	  _createClass(Home, [{
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      if (window.location.pathname === '/Reviews') {
+	        $('html,body').animate({
+	          scrollTop: $("#ReviewSection").offset().top - 100 }, 100);
+	      } else if (window.location.pathname === '/OurMission') {
+	        $('html,body').animate({
+	          scrollTop: $("#MissionSection").offset().top - 100 }, 100);
+	      }
+	    }
+	  }, {
+	    key: 'componentWillUnmount',
+	    value: function componentWillUnmount() {
+	      [].forEach.call(document.querySelectorAll('.parallax-mirror'), function (e) {
+	        e.parentNode.removeChild(e);
+	      });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        { id: 'MainBody' },
+	        _react2.default.createElement(_Navigation2.default, null),
+	        _react2.default.createElement(_Landing2.default, null),
+	        _react2.default.createElement(_MissionSection2.default, null),
+	        _react2.default.createElement(_ImageBreaker2.default, null),
+	        _react2.default.createElement(_Guarantee2.default, null),
+	        _react2.default.createElement(_Technology2.default, null),
+	        _react2.default.createElement(_ReviewSection2.default, null),
+	        _react2.default.createElement(_Footer2.default, null)
+	      );
+	    }
+	  }]);
+	
+	  return Home;
+	}(_react2.default.Component);
+	
+	module.exports = Home;
+
+/***/ },
+/* 553 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(2);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactRouter = __webpack_require__(209);
+	
+	var _jqueryHelpers = __webpack_require__(292);
+	
+	var jqueryHelpers = _interopRequireWildcard(_jqueryHelpers);
+	
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Navigation = function (_React$Component) {
+		_inherits(Navigation, _React$Component);
+	
+		function Navigation(props) {
+			_classCallCheck(this, Navigation);
+	
+			var _this = _possibleConstructorReturn(this, (Navigation.__proto__ || Object.getPrototypeOf(Navigation)).call(this, props));
+	
+			_this.state = {
+				screenWidth: $(document).width()
+			};
+			return _this;
+		}
+	
+		_createClass(Navigation, [{
+			key: 'componentDidMount',
+			value: function componentDidMount() {
+				var that = this;
+				window.addEventListener("resize", function () {
+					that.setState({ screenWidth: $(document).width() });
+				});
+			}
+		}, {
+			key: 'scrollToReviews',
+			value: function scrollToReviews() {
+				this.changeView('/Reviews');
+				$('html,body').animate({
+					scrollTop: $("#ReviewSection").offset().top - 100 }, 2000);
+			}
+		}, {
+			key: 'scrollToMission',
+			value: function scrollToMission() {
+				this.changeView('/OurMission');
+				$('html,body').animate({
+					scrollTop: $("#MissionSection").offset().top - 100 }, 2000);
+			}
+		}, {
+			key: 'handleCartClick',
+			value: function handleCartClick() {
+				_reactRouter.browserHistory.push('/Checkout');
+			}
+		}, {
+			key: 'handleMobileNavClick',
+			value: function handleMobileNavClick(view) {
+				this.handleCloseMobileNav();
+				this.changeView(view);
+			}
+		}, {
+			key: 'handleMobileMenuClick',
+			value: function handleMobileMenuClick() {
+				$("#MobileNavSlideOut").animate({
+					left: '0px'
+				}, 200, function () {
+					// Animation complete.
+				});
+			}
+		}, {
+			key: 'handleCloseMobileNav',
+			value: function handleCloseMobileNav() {
+				$("#MobileNavSlideOut").animate({
+					left: '-200px'
+				}, 200, function () {
+					// Animation complete.
+				});
+			}
+		}, {
+			key: 'changeView',
+			value: function changeView(view) {
+				_reactRouter.browserHistory.push(view);
+			}
+		}, {
+			key: 'getMainNav',
+			value: function getMainNav() {
+				var _this2 = this;
+	
+				return _react2.default.createElement(
+					'div',
+					{ id: 'NavBar' },
+					_react2.default.createElement(
+						'h1',
+						{ id: 'NavBarTitle', onClick: function onClick() {
+								return _this2.changeView('/');
+							} },
+						'CoolTech'
+					),
+					_react2.default.createElement(
+						'div',
+						{ id: 'NavBarNavigation' },
+						_react2.default.createElement(
+							'h2',
+							{ onClick: function onClick() {
+									return _this2.changeView('/Shop');
+								} },
+							'Shop'
+						),
+						_react2.default.createElement(
+							'h2',
+							{ onClick: function onClick() {
+									return _this2.scrollToMission();
+								} },
+							'Our Mission'
+						),
+						_react2.default.createElement(
+							'h2',
+							{ onClick: function onClick() {
+									return _this2.scrollToReviews();
+								} },
+							'Reviews'
+						)
+					),
+					_react2.default.createElement(
+						'div',
+						{ id: 'NavBarRight' },
+						_react2.default.createElement(
+							'div',
+							{ id: 'CountryImage' },
+							_react2.default.createElement('img', { src: '' })
+						),
+						_react2.default.createElement(
+							'div',
+							{ id: 'NavBarPhone' },
+							_react2.default.createElement(
+								'h1',
+								null,
+								'+1 850-276-9677'
+							)
+						),
+						_react2.default.createElement(
+							'div',
+							{ id: 'NavShoppingCart', onClick: function onClick() {
+									return _this2.handleCartClick();
+								} },
+							_react2.default.createElement('img', { src: '/images/shopping-cart.png' })
+						)
+					)
+				);
+			}
+		}, {
+			key: 'getMobileNav',
+			value: function getMobileNav() {
+				var _this3 = this;
+	
+				return _react2.default.createElement(
+					'div',
+					{ id: 'NavBar' },
+					_react2.default.createElement('img', { id: 'MobileNavMenuButton', onClick: function onClick() {
+							return _this3.handleMobileMenuClick();
+						}, src: 'images/menu-button.png' }),
+					_react2.default.createElement(
+						'h1',
+						{ id: 'MobileNavBarTitle' },
+						'CoolTech'
+					),
+					_react2.default.createElement('img', { id: 'MobileNavShoppingCart', src: 'images/shopping-cart.png', onClick: function onClick() {
+							return _this3.handleCartClick();
+						} }),
+					_react2.default.createElement(
+						'div',
+						{ id: 'MobileNavSlideOut' },
+						_react2.default.createElement(
+							'h1',
+							{ onClick: function onClick() {
+									return _this3.handleMobileNavClick("/");
+								} },
+							'HOME'
+						),
+						_react2.default.createElement(
+							'h1',
+							{ onClick: function onClick() {
+									return _this3.handleMobileNavClick("/Shop");
+								} },
+							'SHOP'
+						),
+						_react2.default.createElement(
+							'h1',
+							{ onClick: function onClick() {
+									return _this3.handleMobileNavClick("/About");
+								} },
+							'ABOUT'
+						),
+						_react2.default.createElement(
+							'h1',
+							{ onClick: function onClick() {
+									return _this3.handleMobileNavClick("/Reviews");
+								} },
+							'REVIEWS'
+						),
+						_react2.default.createElement(
+							'h1',
+							{ onClick: function onClick() {
+									return _this3.handleMobileNavClick("/Contact");
+								} },
+							'CONTACT'
+						),
+						_react2.default.createElement('img', { src: 'images/cancel.png', onClick: function onClick() {
+								return _this3.handleCloseMobileNav();
+							} })
+					)
+				);
+			}
+		}, {
+			key: 'handleMobileNavClick',
+			value: function handleMobileNavClick(view) {
+				this.changeView(view);
+				this.handleCloseMobileNav();
+			}
+		}, {
+			key: 'handleMobileMenuClick',
+			value: function handleMobileMenuClick() {
+				$("#MobileNavSlideOut").animate({
+					left: '0px'
+				}, 200, function () {
+					// Animation complete.
+				});
+			}
+		}, {
+			key: 'handleCloseMobileNav',
+			value: function handleCloseMobileNav() {
+				$("#MobileNavSlideOut").animate({
+					left: '-200px'
+				}, 200, function () {
+					// Animation complete.
+				});
+			}
+		}, {
+			key: 'render',
+			value: function render() {
+				var navigation = this.getMainNav();
+				if (jqueryHelpers.isMobile() || this.state.screenWidth <= 790) {
+					navigation = this.getMobileNav();
+				}
+				return navigation;
+			}
+		}]);
+	
+		return Navigation;
+	}(_react2.default.Component);
+	
+	;
+	
+	module.exports = Navigation;
+
+/***/ },
+/* 554 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(2);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(33);
+	
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+	
+	var _ReactCSSTransitionGroup = __webpack_require__(294);
+	
+	var _ReactCSSTransitionGroup2 = _interopRequireDefault(_ReactCSSTransitionGroup);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Landing = function (_React$Component) {
+	  _inherits(Landing, _React$Component);
+	
+	  function Landing(props) {
+	    _classCallCheck(this, Landing);
+	
+	    var _this = _possibleConstructorReturn(this, (Landing.__proto__ || Object.getPrototypeOf(Landing)).call(this, props));
+	
+	    _this.state = {};
+	    return _this;
+	  }
+	
+	  _createClass(Landing, [{
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      $('#landing-window').parallax({
+	        imageSrc: 'images/girlonbed.jpeg'
+	      });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	
+	      return _react2.default.createElement(
+	        'div',
+	        { id: 'Landing' },
+	        _react2.default.createElement(
+	          'div',
+	          { id: "landing-window", 'data-parallax': "scroll", 'data-position': "top", 'data-bleed': "10", 'data-image-src': "images/rage.jpg", 'data-natural-width': "1400", 'data-natural-height': "900" },
+	          _react2.default.createElement('div', { 'class': 'parallax-slider' })
+	        ),
+	        _react2.default.createElement('div', { className: 'arrow bounce', id: 'arrowbounce' })
+	      );
+	    }
+	  }]);
+	
+	  return Landing;
+	}(_react2.default.Component);
+	
+	module.exports = Landing;
+
+/***/ },
+/* 555 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -51445,6 +51039,890 @@
 	}(_react2.default.Component);
 	
 	module.exports = Technology;
+
+/***/ },
+/* 556 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(2);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(33);
+	
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+	
+	var _ReactCSSTransitionGroup = __webpack_require__(294);
+	
+	var _ReactCSSTransitionGroup2 = _interopRequireDefault(_ReactCSSTransitionGroup);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var ImageBreaker = function (_React$Component) {
+	  _inherits(ImageBreaker, _React$Component);
+	
+	  function ImageBreaker(props) {
+	    _classCallCheck(this, ImageBreaker);
+	
+	    var _this = _possibleConstructorReturn(this, (ImageBreaker.__proto__ || Object.getPrototypeOf(ImageBreaker)).call(this, props));
+	
+	    _this.state = {};
+	    return _this;
+	  }
+	
+	  _createClass(ImageBreaker, [{
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      $('#image-breaker-window').parallax({
+	        imageSrc: 'images/coffee-cup-bed-bedroom.jpeg'
+	      });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	
+	      return _react2.default.createElement(
+	        'div',
+	        { id: "image-breaker-window", 'data-parallax': "scroll", 'data-position': "top", 'data-bleed': "10", 'data-natural-width': "1400", 'data-natural-height': "900" },
+	        _react2.default.createElement('div', { 'class': 'parallax-slider' })
+	      );
+	    }
+	  }]);
+	
+	  return ImageBreaker;
+	}(_react2.default.Component);
+	
+	module.exports = ImageBreaker;
+
+/***/ },
+/* 557 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(2);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(33);
+	
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+	
+	var _ReactCSSTransitionGroup = __webpack_require__(294);
+	
+	var _ReactCSSTransitionGroup2 = _interopRequireDefault(_ReactCSSTransitionGroup);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Guarantee = function (_React$Component) {
+	  _inherits(Guarantee, _React$Component);
+	
+	  function Guarantee(props) {
+	    _classCallCheck(this, Guarantee);
+	
+	    var _this = _possibleConstructorReturn(this, (Guarantee.__proto__ || Object.getPrototypeOf(Guarantee)).call(this, props));
+	
+	    _this.state = {};
+	    return _this;
+	  }
+	
+	  _createClass(Guarantee, [{
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {}
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        { id: "guarantees" },
+	        _react2.default.createElement(
+	          'div',
+	          { id: 'GuaranteesHolder' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'guarantee' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'guaranteeImage' },
+	              _react2.default.createElement('img', { src: 'images/calendar.png' })
+	            ),
+	            _react2.default.createElement(
+	              'h1',
+	              null,
+	              'No-Risk 365 Night Trial'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'guarantee' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'guaranteeImage' },
+	              _react2.default.createElement('img', { src: 'images/trolley.png' })
+	            ),
+	            _react2.default.createElement(
+	              'h1',
+	              null,
+	              'Free Shipping & Returns'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'guarantee' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'guaranteeImage' },
+	              _react2.default.createElement('img', { src: 'images/clipboard.png' })
+	            ),
+	            _react2.default.createElement(
+	              'h1',
+	              null,
+	              '10-Year Warranty'
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return Guarantee;
+	}(_react2.default.Component);
+	
+	module.exports = Guarantee;
+
+/***/ },
+/* 558 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(2);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(33);
+	
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var ReviewSection = function (_React$Component) {
+	  _inherits(ReviewSection, _React$Component);
+	
+	  function ReviewSection(props) {
+	    _classCallCheck(this, ReviewSection);
+	
+	    var _this = _possibleConstructorReturn(this, (ReviewSection.__proto__ || Object.getPrototypeOf(ReviewSection)).call(this, props));
+	
+	    _this.state = {};
+	    return _this;
+	  }
+	
+	  _createClass(ReviewSection, [{
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {}
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var reviewText = "Ali Dakota was created on Kauai by founder and artist Jill Smith. She came across the art of eco-printing, the process of imprinting Mother Nature’s flora onto fabrics. She instantly knew this was a form of art she could take with her while she traveled the world with her family. Through thoughtful design and the alchemy of the natural world, each piece Jill creates is one-of-a-kind.";
+	      return _react2.default.createElement(
+	        'div',
+	        { id: 'ReviewSection' },
+	        _react2.default.createElement(
+	          'h1',
+	          { id: 'ReviewTitle' },
+	          'Join The Community'
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'ReviewHolder' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'Review' },
+	            _react2.default.createElement('div', { className: 'ReviewImage', style: { 'backgroundImage': "url('images/girlsface.jpg')" } }),
+	            _react2.default.createElement(
+	              'h1',
+	              null,
+	              'Mary Ann'
+	            ),
+	            _react2.default.createElement(
+	              'p1',
+	              null,
+	              reviewText
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'Review' },
+	            _react2.default.createElement('div', { className: 'ReviewImage', style: { 'backgroundImage': "url('images/girlsface.jpg')" } }),
+	            _react2.default.createElement(
+	              'h1',
+	              null,
+	              'Mary Ann'
+	            ),
+	            _react2.default.createElement(
+	              'p1',
+	              null,
+	              reviewText
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'Review' },
+	            _react2.default.createElement('div', { className: 'ReviewImage', style: { 'backgroundImage': "url('images/girlsface.jpg')" } }),
+	            _react2.default.createElement(
+	              'h1',
+	              null,
+	              'Mary Ann'
+	            ),
+	            _react2.default.createElement(
+	              'p1',
+	              null,
+	              reviewText
+	            )
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { id: 'ViewReviews' },
+	          'Read More Reviews'
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return ReviewSection;
+	}(_react2.default.Component);
+	
+	module.exports = ReviewSection;
+
+/***/ },
+/* 559 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(2);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(33);
+	
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+	
+	var _MuiThemeProvider = __webpack_require__(312);
+	
+	var _MuiThemeProvider2 = _interopRequireDefault(_MuiThemeProvider);
+	
+	var _TextField = __webpack_require__(459);
+	
+	var _TextField2 = _interopRequireDefault(_TextField);
+	
+	var _SelectField = __webpack_require__(479);
+	
+	var _SelectField2 = _interopRequireDefault(_SelectField);
+	
+	var _MenuItem = __webpack_require__(537);
+	
+	var _MenuItem2 = _interopRequireDefault(_MenuItem);
+	
+	var _RaisedButton = __webpack_require__(538);
+	
+	var _RaisedButton2 = _interopRequireDefault(_RaisedButton);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Checkout = function (_React$Component) {
+	  _inherits(Checkout, _React$Component);
+	
+	  function Checkout(props) {
+	    _classCallCheck(this, Checkout);
+	
+	    var _this = _possibleConstructorReturn(this, (Checkout.__proto__ || Object.getPrototypeOf(Checkout)).call(this, props));
+	
+	    _this.state = {
+	      exp_month_value: ''
+	    };
+	    return _this;
+	  }
+	
+	  _createClass(Checkout, [{
+	    key: 'handleExpMonthChange',
+	    value: function handleExpMonthChange(event, index, value) {
+	      this.setState({ exp_month_value: value });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var _this2 = this;
+	
+	      return _react2.default.createElement(
+	        'div',
+	        { id: 'CheckoutPage' },
+	        _react2.default.createElement(
+	          'form',
+	          { action: '/your-charge-code', method: 'POST', id: 'payment-form' },
+	          _react2.default.createElement('span', { className: 'payment-errors' }),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'form-row' },
+	            _react2.default.createElement(
+	              'h1',
+	              null,
+	              '1. Contact Details'
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'form-input' },
+	              _react2.default.createElement(
+	                _MuiThemeProvider2.default,
+	                null,
+	                _react2.default.createElement(_TextField2.default, { hintText: 'Email', 'data-stripe': 'number' })
+	              )
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'form-row' },
+	            _react2.default.createElement(
+	              'h1',
+	              null,
+	              '2. Shipping Address'
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'form-input' },
+	              _react2.default.createElement(
+	                _MuiThemeProvider2.default,
+	                null,
+	                _react2.default.createElement(_TextField2.default, { hintText: 'Street', 'data-stripe': 'number' })
+	              ),
+	              _react2.default.createElement(
+	                _MuiThemeProvider2.default,
+	                null,
+	                _react2.default.createElement(_TextField2.default, { hintText: 'City', 'data-stripe': 'number' })
+	              ),
+	              _react2.default.createElement(
+	                _MuiThemeProvider2.default,
+	                null,
+	                _react2.default.createElement(_TextField2.default, { hintText: 'State', 'data-stripe': 'number' })
+	              ),
+	              _react2.default.createElement(
+	                _MuiThemeProvider2.default,
+	                null,
+	                _react2.default.createElement(_TextField2.default, { hintText: 'Zipcode', type: 'text', size: '6', 'data-stripe': 'address_zip' })
+	              )
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'form-row' },
+	            _react2.default.createElement(
+	              'h1',
+	              null,
+	              '3. Payment Method'
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'form-input' },
+	              _react2.default.createElement(
+	                _MuiThemeProvider2.default,
+	                null,
+	                _react2.default.createElement(_TextField2.default, { hintText: 'Name', 'data-stripe': 'number' })
+	              ),
+	              _react2.default.createElement(
+	                _MuiThemeProvider2.default,
+	                null,
+	                _react2.default.createElement(_TextField2.default, { hintText: 'Card Number', type: 'text', size: '20', 'data-stripe': 'number' })
+	              ),
+	              _react2.default.createElement(
+	                _MuiThemeProvider2.default,
+	                null,
+	                _react2.default.createElement(
+	                  _SelectField2.default,
+	                  {
+	                    hintText: 'Expiration Month',
+	                    value: this.state.exp_month_value,
+	                    onChange: function onChange() {
+	                      return _this2.handleExpMonthChange();
+	                    },
+	                    maxHeight: 150,
+	                    type: 'text', size: '2', 'data-stripe': 'exp_month'
+	                  },
+	                  _react2.default.createElement(_MenuItem2.default, { value: 1, primaryText: 'Jan(01)' }),
+	                  _react2.default.createElement(_MenuItem2.default, { value: 2, primaryText: 'Feb(02)' }),
+	                  _react2.default.createElement(_MenuItem2.default, { value: 3, primaryText: 'Mar(03)' }),
+	                  _react2.default.createElement(_MenuItem2.default, { value: 4, primaryText: 'Apr(04)' }),
+	                  _react2.default.createElement(_MenuItem2.default, { value: 5, primaryText: 'May(05)' }),
+	                  _react2.default.createElement(_MenuItem2.default, { value: 1, primaryText: 'June(06)' }),
+	                  _react2.default.createElement(_MenuItem2.default, { value: 2, primaryText: 'July(07)' }),
+	                  _react2.default.createElement(_MenuItem2.default, { value: 3, primaryText: 'Aug(08)' }),
+	                  _react2.default.createElement(_MenuItem2.default, { value: 4, primaryText: 'Sep(09)' }),
+	                  _react2.default.createElement(_MenuItem2.default, { value: 5, primaryText: 'Oct(10)' }),
+	                  _react2.default.createElement(_MenuItem2.default, { value: 5, primaryText: 'Nov(11)' }),
+	                  _react2.default.createElement(_MenuItem2.default, { value: 5, primaryText: 'Dec(12)' })
+	                )
+	              ),
+	              _react2.default.createElement(
+	                _MuiThemeProvider2.default,
+	                null,
+	                _react2.default.createElement(
+	                  _SelectField2.default,
+	                  {
+	                    hintText: 'Expiration Year',
+	                    value: this.state.exp_month_value,
+	                    onChange: function onChange() {
+	                      return _this2.handleExpMonthChange();
+	                    },
+	                    maxHeight: 150,
+	                    type: 'text', size: '2', 'data-stripe': 'exp_year'
+	                  },
+	                  _react2.default.createElement(_MenuItem2.default, { value: 1, primaryText: '2016' }),
+	                  _react2.default.createElement(_MenuItem2.default, { value: 2, primaryText: '2017' }),
+	                  _react2.default.createElement(_MenuItem2.default, { value: 3, primaryText: '2018' }),
+	                  _react2.default.createElement(_MenuItem2.default, { value: 4, primaryText: '2019' }),
+	                  _react2.default.createElement(_MenuItem2.default, { value: 5, primaryText: '2020' }),
+	                  _react2.default.createElement(_MenuItem2.default, { value: 1, primaryText: '2021' }),
+	                  _react2.default.createElement(_MenuItem2.default, { value: 2, primaryText: '2022' }),
+	                  _react2.default.createElement(_MenuItem2.default, { value: 3, primaryText: '2023' }),
+	                  _react2.default.createElement(_MenuItem2.default, { value: 4, primaryText: '2024' }),
+	                  _react2.default.createElement(_MenuItem2.default, { value: 5, primaryText: '2026' })
+	                )
+	              ),
+	              _react2.default.createElement(
+	                _MuiThemeProvider2.default,
+	                null,
+	                _react2.default.createElement(_TextField2.default, { hintText: 'Security Code', type: 'text', size: '4', 'data-stripe': 'cvc' })
+	              )
+	            )
+	          ),
+	          _react2.default.createElement(
+	            _MuiThemeProvider2.default,
+	            null,
+	            _react2.default.createElement(_RaisedButton2.default, { label: 'Place Your Order', backgroundColor: '#5CB85C', style: { 'textColor': '#ffffff', 'color': '#ffffff' } })
+	          )
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return Checkout;
+	}(_react2.default.Component);
+	
+	module.exports = Checkout;
+
+/***/ },
+/* 560 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(2);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(33);
+	
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+	
+	var _reactScroll = __webpack_require__(279);
+	
+	var _reactScroll2 = _interopRequireDefault(_reactScroll);
+	
+	var _Navigation = __webpack_require__(553);
+	
+	var _Navigation2 = _interopRequireDefault(_Navigation);
+	
+	var _Footer = __webpack_require__(309);
+	
+	var _Footer2 = _interopRequireDefault(_Footer);
+	
+	var _FAQItems = __webpack_require__(561);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var FAQ = function (_React$Component) {
+	  _inherits(FAQ, _React$Component);
+	
+	  function FAQ(props) {
+	    _classCallCheck(this, FAQ);
+	
+	    var _this = _possibleConstructorReturn(this, (FAQ.__proto__ || Object.getPrototypeOf(FAQ)).call(this, props));
+	
+	    _this.state = {};
+	    return _this;
+	  }
+	
+	  _createClass(FAQ, [{
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      $(window).scrollTop(0, 0);
+	    }
+	  }, {
+	    key: 'componentWillUnmount',
+	    value: function componentWillUnmount() {}
+	  }, {
+	    key: 'buildFAQs',
+	    value: function buildFAQs() {
+	      console.log(_FAQItems.FAQItems);
+	      var items = _FAQItems.FAQItems.map(function (item) {
+	        return _react2.default.createElement(
+	          'div',
+	          { className: 'FAQItem' },
+	          _react2.default.createElement(
+	            'h1',
+	            null,
+	            item.question
+	          ),
+	          _react2.default.createElement(
+	            'p1',
+	            null,
+	            item.answer
+	          )
+	        );
+	      });
+	      return items;
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var items = this.buildFAQs();
+	      console.log(items);
+	      return _react2.default.createElement(
+	        'div',
+	        { id: 'MainBody' },
+	        _react2.default.createElement(_Navigation2.default, null),
+	        _react2.default.createElement(
+	          'div',
+	          { id: 'FAQ' },
+	          _react2.default.createElement(
+	            'h1',
+	            { id: 'FAQTitle' },
+	            'FAQ'
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { id: 'FAQHolder' },
+	            items
+	          )
+	        ),
+	        _react2.default.createElement(_Footer2.default, null)
+	      );
+	    }
+	  }]);
+	
+	  return FAQ;
+	}(_react2.default.Component);
+	
+	module.exports = FAQ;
+
+/***/ },
+/* 561 */
+/***/ function(module, exports) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	var FAQItems = exports.FAQItems = [{
+		question: "What is CoolTech Mattress™",
+		answer: "CoolTech Mattress™ is a Superior construction foam mattress comprised of the CoolTech Proprietary Memory Fiber layer. This Highly Engineered layer allows for maximum Air Flow which results in less Heat Retention which help you sleep cooler."
+	}, {
+		question: "Is CoolTech Mattress™ comfortable?",
+		answer: "We think our CoolTech Mattress™ is the most comfortable Mattress you can buy. We have engineered this mattress with 30 years of product development knowledge and we used the best materials offered on the market to give you a good night sleep. Our construction not only offers the best Air Flow of the industry, it also allows your body to distribute the pressure points in the most comfortable way. Our Proprietary Memory Fiber Layer is made with Material that is Environment Friendly, 100% Recyclable, Hypoallergenic, No Dangerous Fumes, Mildew Resistant, Mold Resistant, Flame Resistant, No Distinct Odor, and Highly Breathable. We are sure you are going to be thrilled with your CoolTech Mattress™, and with the extra features that add to the comfort. CoolTech Mattress™ is hypo-allergenic. We use no latex based foams. That is comfort. Don’t just take our word for it. See what others are saying at cooltechmattress.com"
+	}, {
+		question: "How long will CoolTech Mattress™ be covered by warranty?",
+		answer: "The CoolTech Mattress is covered by a 7 year limited warranty. You can find the full text at cooltechmattress.com/warranty. In short, we&#39;ll either repair any issue causing the mattress an indent greater than one inch, or, pending on the severity, we’ll replace the bed entirely according to the warranty policy. We also cover any physical flaw in the mattress that causes our foam layers to split or crack despite normal usage and proper handling. Finally, our warranty extends to the mattress cover and any manufacturing defect in the zipper assembly. Should any of these issues happen to you, please reach out to us as a warranty claim. Our top priority is resolving your issue as quick and painlessly as we can."
+	}, {
+		question: "Why does CoolTech Mattress™ only have one model?",
+		answer: "We chose to make your life easier and put everything into one bed. The old mattress companies do a great job of presenting a line of products that encourages you to spend more to get more features. We avoided that whole approach.  Instead of going to your local mattress dealer and wading through dozens of mattresses, all designed to get you to spend more, we give it to you in a single bed."
+	}, {
+		question: "Is CoolTech Mattress™ made in the USA?",
+		answer: "Yes! CoolTech Mattress is manufactured in Georgia and shipped right to your front door."
+	}, {
+		question: "What makes CoolTech Mattress™ different from other mattresses?",
+		answer: "CoolTech Mattress™ is the only mattress made with Memory Fiber technology. Designed and Engineered with the best Materials available to help you sleep cooler every time. We have selected a High definition fabric for added comfort and coupled it with additional features that help wick the moisture away from your body for superior comfort. Our construction gives you the best weight distribution and relief from pressure points. Our Highly breathable Memory Fiber Layer will not retain heat as all foams do and will allow you to sleep cooler."
+	}, {
+		question: "Does CoolTech Mattress™ have memory foam?",
+		answer: "What makes the CoolTech Mattress™ so comfortable is the selection of materials. We do not use memory foams like our competitors. We have engineered a superior construction that gives you all the benefits of traditional mattress with a great bounce, less heat retention and outstanding breathability."
+	}, {
+		question: "What is CoolTech proprietary Memory Fiber Layer?",
+		answer: "The “Memory Fiber Layer” combined with our other selected premium foam layers for the core of the mattress, give our mattress a better bounce effect and make it feel more like a traditional spring mattress. It is much easier to turn around and move around on our mattress than any other foam mattress. You just do not sink in, you sleep on top. (of the mattress I mean). Instead of using a foam material with limited airflow, we use a “Memory Fiber Layer”. This material has 5 to 10 times more air flow capabilityn than any foam which leads to a lot less Heat Retention. In our case, the airflow is the ability for the air to escape from the mattress and to be replaced by fresh air."
+	}, {
+		question: "How much weight can CoolTech Mattress hold?",
+		answer: "CoolTech mattress can safely support the weight of two adults (500 lbs total) for the lifetime of the mattress (7 years)."
+	}, {
+		question: "Do you need to flip CoolTech Mattress™?",
+		answer: "No, you do not need to flip CoolTech Mattress™. The Memory Fiber Breathable layer is only on one side for your comfort. If you find yourself consistently sleeping on one side of the bed, you can turn the mattress to even out wear."
+	}];
+
+/***/ },
+/* 562 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(2);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(33);
+	
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+	
+	var _reactRouter = __webpack_require__(209);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var MissionSection = function (_React$Component) {
+	  _inherits(MissionSection, _React$Component);
+	
+	  function MissionSection(props) {
+	    _classCallCheck(this, MissionSection);
+	
+	    var _this = _possibleConstructorReturn(this, (MissionSection.__proto__ || Object.getPrototypeOf(MissionSection)).call(this, props));
+	
+	    _this.state = {};
+	    return _this;
+	  }
+	
+	  _createClass(MissionSection, [{
+	    key: 'changeView',
+	    value: function changeView(view) {
+	      _reactRouter.browserHistory.push(view);
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var _this2 = this;
+	
+	      var headerBeginning = "N A T U R E ' S";
+	      var headerEnd = "F I N G E R P R I N T";
+	      var paragraphOne = "Ali Dakota was created on Kauai by founder and artist Jill Smith. She came across the art of eco-printing, the process of imprinting Mother Nature’s flora onto fabrics. She instantly knew this was a form of art she could take with her while she traveled the world with her family. Through thoughtful design and the alchemy of the natural world, each piece Jill creates is one-of-a-kind.";
+	      var paragraphTwo = "The line brings together the love of nature, exploration, adventure, and art. Jills artistic process is rooted in gratitude and offers you a sense of grounded energy as you walk your path. Ali Dakota is sustainably crafted in Los Angeles, using Jill's naturally hand-printed fabric and up-cycled remnants from airplane seat leather. In a world of disposable fashion, Ali Dakota offers a quality product meant to last.";
+	      return _react2.default.createElement(
+	        'div',
+	        { id: 'MissionSection' },
+	        _react2.default.createElement(
+	          'h1',
+	          null,
+	          headerBeginning,
+	          '\xA0 \xA0',
+	          headerEnd
+	        ),
+	        _react2.default.createElement(
+	          'p1',
+	          null,
+	          paragraphOne,
+	          _react2.default.createElement('br', null)
+	        ),
+	        _react2.default.createElement(
+	          'p1',
+	          null,
+	          paragraphTwo
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { id: 'LearnMore', onClick: function onClick() {
+	              return _this2.changeView('/About');
+	            } },
+	          'Learn More'
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return MissionSection;
+	}(_react2.default.Component);
+	
+	module.exports = MissionSection;
+
+/***/ },
+/* 563 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(2);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(33);
+	
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+	
+	var _ReactCSSTransitionGroup = __webpack_require__(294);
+	
+	var _ReactCSSTransitionGroup2 = _interopRequireDefault(_ReactCSSTransitionGroup);
+	
+	var _Navigation = __webpack_require__(553);
+	
+	var _Navigation2 = _interopRequireDefault(_Navigation);
+	
+	var _Footer = __webpack_require__(309);
+	
+	var _Footer2 = _interopRequireDefault(_Footer);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Contact = function (_React$Component) {
+	  _inherits(Contact, _React$Component);
+	
+	  function Contact(props) {
+	    _classCallCheck(this, Contact);
+	
+	    var _this = _possibleConstructorReturn(this, (Contact.__proto__ || Object.getPrototypeOf(Contact)).call(this, props));
+	
+	    _this.state = {};
+	    return _this;
+	  }
+	
+	  _createClass(Contact, [{
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      $('#contact-window').parallax({
+	        imageSrc: 'images/bikeinroom.jpeg'
+	      });
+	      $(window).scrollTop(0, 0);
+	      setTimeout(function () {
+	        $('#ContactItemAddress p1').css('white-space', 'normal');
+	      }, 0);
+	    }
+	  }, {
+	    key: 'componentWillUnmount',
+	    value: function componentWillUnmount() {
+	      [].forEach.call(document.querySelectorAll('.parallax-mirror'), function (e) {
+	        e.parentNode.removeChild(e);
+	      });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var meetTheCreatorText = "";
+	      return _react2.default.createElement(
+	        'div',
+	        { id: 'MainBody' },
+	        _react2.default.createElement(_Navigation2.default, null),
+	        _react2.default.createElement(
+	          'div',
+	          { id: 'ContactPage' },
+	          _react2.default.createElement(
+	            'div',
+	            { id: "contact-window", 'data-parallax': "scroll", 'data-position': "top", 'data-bleed': "10", 'data-image-src': "images/rage.jpg", 'data-natural-width': "1400", 'data-natural-height': "900" },
+	            _react2.default.createElement(
+	              'div',
+	              { 'class': 'parallax-slider' },
+	              _react2.default.createElement(
+	                'div',
+	                { id: 'ContactUsHolder' },
+	                _react2.default.createElement(
+	                  'h1',
+	                  null,
+	                  'How Can We Help?'
+	                ),
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'ContactItem' },
+	                  _react2.default.createElement('img', { src: 'images/smartphone.png' }),
+	                  _react2.default.createElement(
+	                    'p1',
+	                    { style: { 'lineHeight': '55px' } },
+	                    '(850)-276-9677'
+	                  )
+	                ),
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'ContactItem' },
+	                  _react2.default.createElement('img', { src: 'images/mail.png' }),
+	                  _react2.default.createElement(
+	                    'p1',
+	                    { style: { 'lineHeight': '55px' } },
+	                    'support@cooltechbedding.com'
+	                  )
+	                ),
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'ContactItem', id: 'ContactItemAddress' },
+	                  _react2.default.createElement('img', { src: 'images/map_2.png' }),
+	                  _react2.default.createElement(
+	                    'p1',
+	                    null,
+	                    '3516 dragons ridge road, Panama City Beach, FL'
+	                  )
+	                )
+	              )
+	            )
+	          ),
+	          _react2.default.createElement('div', { className: 'arrow bounce', id: 'arrowbounce' })
+	        ),
+	        _react2.default.createElement(_Footer2.default, null)
+	      );
+	    }
+	  }]);
+	
+	  return Contact;
+	}(_react2.default.Component);
+	
+	module.exports = Contact;
 
 /***/ }
 /******/ ]);

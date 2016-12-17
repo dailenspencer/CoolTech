@@ -31,8 +31,25 @@
 	padding-bottom:20px;
 }
 #MissionSection p1:nth-child(3) {
-	border-bottom: solid 1px #DDDDDD;
-	padding-bottom:40px;
+	padding-bottom:20px;
+}
+
+#LearnMore {
+	width: 200px;
+	height: 50px;
+	border: solid 1px white;
+	font-size:18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	transition: all .2s ease-in-out;
+	 animation: 2000ms pulse 500ms ease-in-out infinite;
+    -webkit-animation: 2000ms pulse 500ms ease-in-out infinite;
+    margin-right: 410px;
 }
 
 @media only screen and (max-width: 870px) {
@@ -47,6 +64,9 @@
 @media only screen and (max-width: 800px) {
   #MissionSection {
 	padding:10px 100px 10px 100px;
+  }
+  #LearnMore {
+  	margin: 0 auto;
   }
 }
 

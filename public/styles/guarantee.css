@@ -35,6 +35,7 @@
 	font-size:24px;
 	font-family: 'Roboto', sans-serif;
 	font-weight: 300;
+	margin-bottom:0px;
 }
 
 @media only screen and (max-width: 500px) {

@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { browserHistory } from 'react-router';
 
 class Footer extends React.Component {
   constructor(props) {
@@ -10,6 +11,9 @@ class Footer extends React.Component {
     };
   }
 
+  changeView(view) {
+    browserHistory.push(view);
+  }
 
   render() {
     return (
@@ -19,12 +23,12 @@ class Footer extends React.Component {
             <p1>© 2016 Treehouse Island, Inc.</p1>
           </div>
           <div id="FooterNavigation">
-            <h1>About</h1>
-            <h1>FAQ</h1>
+            <h1 onClick={() => this.changeView('About')}>About</h1>
+            <h1 onClick={() => this.changeView('FAQ')}>FAQ</h1>
             <h1>Shipping & Returns</h1>
             <h1>Refund Policy</h1>
             <h1>Risk-Free Trial</h1>
-            <h1>Contact</h1>
+            <h1 onClick={() => this.changeView('Contact')}>Contact</h1>
           </div>
           <div id="FooterSocial">
             <div className="SocialHolder">

@@ -1,0 +1,37 @@
+#FAQ h1 {
+	color:#8BC8DC;
+}
+#FAQTitle {
+	text-align: center;
+	margin-top: 150px;
+}
+
+#FAQHolder {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.FAQItem {
+	display: flex;
+	flex-direction:column;
+	flex-basis: 60%;
+	position: relative;
+	align-items:center;
+	padding: 20px;
+}
+
+.FAQItem h1{
+	font-size: 24px;
+	font-weight: bold;
+	width: 100%;
+	text-align: center;
+}
+
+.FAQItem p1{
+	font-size: 14px;
+	line-height: 1.1;
+	text-align: left;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+}

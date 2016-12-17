@@ -1,0 +1,46 @@
+#contact-window
+{
+    height: 100%;
+    background: transparent;
+    position:relative;
+}
+#ContactUsHolder {
+	text-align: center;
+	position: absolute;
+	left:50%;
+	transform:translateX(-50%);
+	top:120px;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#contact-window h1 {
+	line-height: 1.1;
+	color: white;
+}
+
+
+
+.ContactItem {
+	padding: 20px;
+	display: flex;
+}
+.ContactItem p1 {
+	color: white;
+	margin-left:50px;
+	text-align: left;
+	white-space: nowrap;
+
+	
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.ContactItem img {
+	float: left;
+	width: 50px !important;
+	height: 50px !important;
+}
