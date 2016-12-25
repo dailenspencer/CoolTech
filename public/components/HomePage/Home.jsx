@@ -3,11 +3,11 @@ import ReactDOM from 'react-dom';
 import Scroll from 'react-scroll'
 import Navigation from '../Navigation';
 import Landing from './Landing';
-import Technology from './Technology';
-import ImageBreaker from './ImageBreaker';
 import MissionSection from './MissionSection';
-import Guarantee from './Guarantee';
 import ReviewSection from './ReviewSection';
+import Technology from './Technology';
+import Guarantee from './Guarantee';
+import FooterPopup from './FooterPopup';
 import Footer from '../Footer';
 
 class Home extends React.Component {
@@ -43,10 +43,8 @@ class Home extends React.Component {
           <Navigation/>
           <Landing/>
           <MissionSection/>
-          <ImageBreaker/>
-          <Guarantee/>
-          <Technology/>
           <ReviewSection/>
+          <Technology/>
           <Footer/>
         </div>
         

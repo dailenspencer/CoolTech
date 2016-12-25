@@ -20,14 +20,12 @@
 #FooterHeader h1 {
 	font-size:30px;
 	font-weight: 300;
-	color:#FFF7AE;
 	color:white;
 }
 
 #FooterHeader p1 {
 	font-size:14px;
 	font-weight: 300;
-	color:#FFF7AE;
 	color:white;
 }
 
@@ -48,11 +46,14 @@
 	flex-basis: 45%;
 	position: relative;
 	margin:0px;
-	color:#FFF7AE;
 	color:white;
 	cursor: pointer;
 }
 
+#FooterNavigation h1:hover {
+	font-style: bold;
+	font-weight: 400;
+}
 
 #FooterSocial {
 	display: flex;

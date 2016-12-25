@@ -1,0 +1,128 @@
+#ReviewSection {
+	background-color: white;
+	height: 680px;
+	padding-top:40px;
+	justify-content: space-around;
+}
+#ReviewTitle {
+	margin:0px;
+	color: #63B5D0;
+	font-family: 'Montserrat', sans-serif;
+	text-align: center;
+	line-height: 1.1;
+}
+.ReviewHolder {
+	display: flex;
+	flex-direction:row;
+	justify-content: space-between;
+	height: 460px;
+	margin-top:50px;
+}
+
+.Review {
+	flex-basis: 33%;
+	position: relative;
+	text-align:center;
+	color: white;
+	outline: none;
+	padding:0px 20px 0px 20px;
+	box-sizing:border-box;
+}
+
+.ReviewImage {
+	width: 150px;
+	height: 150px;
+	border-radius: 100%;
+	background-repeat: no-repeat;
+    background-size: cover;
+    margin:auto;
+    overflow:hidden;
+    -webkit-border-radius:50px;
+    -moz-border-radius:50px;
+    border-radius:100%;
+    background-position: center;
+}
+.Review img {
+	width: 100%;
+}
+
+.Review h1 {
+	font-size: 24px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	line-height: 1.1;
+	margin-top: 0px;
+	color: #626B73;
+}
+
+.Review p1 {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	font-size: 20px;
+	line-height: 1.0;
+	color: #717f86;
+}
+.ReviewRating {
+	display: flex;
+	flex-direction:row;
+	justify-content:center;
+}
+
+.ReviewRating img{
+	width: 30px;
+	height: 30px;
+	margin: 10px 5px 10px 5px;
+}
+
+#ViewReviews {
+	width: 200px;
+	height: 50px;
+	border-radius: 5px;
+	margin: 0 auto;
+	font-size:18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	background-color: white;
+	color:#63B5D0;
+	border: solid 1px #63B5D0;
+	transition: all .2s ease-in-out;
+	animation: 2000ms pulse 500ms ease-in-out infinite;
+    -webkit-animation: 2000ms pulse 500ms ease-in-out infinite;
+}
+
+#ViewReviews:hover {
+	background-color: #63B5D0;
+	color: white;
+}
+
+@media only screen and (max-width: 840px) {
+	#ReviewSection {
+		height: 1500px;
+	}
+	.ReviewHolder {
+		flex-direction:column;
+		height: 1250px;
+	}
+	#ReviewTitle {
+		line-height: 1.1;
+	}
+	#ViewReviews {
+		margin-top: 40px;
+	}
+}
+
+@media only screen and (max-width: 450px) {
+	#ReviewSection {
+		height: 1700px;
+	}
+	.Review {
+		padding:20px;
+	}
+	.ReviewHolder {
+		height: 1450px;
+	}
+}

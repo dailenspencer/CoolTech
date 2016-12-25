@@ -1,48 +1,52 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import ReactCSSTransitionGroup from 'react/lib/ReactCSSTransitionGroup';
+
 
 class ReviewSection extends React.Component {
-  constructor(props) {
-    super(props);
-   
-    this.state = {
-      
-    };
-  }
+	constructor(props){
+		super(props)
+
+		this.state = {
+
+		}
+	}
 
   componentDidMount() {
-    
+      $('#image-breaker-window').parallax({
+        imageSrc: 'images/coffee-cup-bed-bedroom.jpeg'
+      });
+  }
+
+  handleMouseEnter() {
+    $( "#image-breaker-window button h2" ).animate({
+      "padding-right":"20px"
+    }, 250, function() {
+    });
+  }
+
+  handleMouseLeave() {
+    $( "#image-breaker-window button h2" ).animate({
+      "padding-right":"0px"
+      }, 250, function() {
+    });
   }
 
   render() {
-    var reviewText = "Ali Dakota was created on Kauai by founder and artist Jill Smith. She came across the art of eco-printing, the process of imprinting Mother Nature’s flora onto fabrics. She instantly knew this was a form of art she could take with her while she traveled the world with her family. Through thoughtful design and the alchemy of the natural world, each piece Jill creates is one-of-a-kind."
-    return (
-        <div id="ReviewSection">
-          <h1 id="ReviewTitle">Join The Community</h1>
-          <div className="ReviewHolder">
-            <div className="Review">
-              <div className="ReviewImage" style={{'backgroundImage':"url('images/girlsface.jpg')"}}></div>
-              <h1>Mary Ann</h1>
-              <p1>{reviewText}</p1>
-            </div>
-            <div className="Review">
-              <div className="ReviewImage" style={{'backgroundImage':"url('images/girlsface.jpg')"}}>
-              </div>
-              <h1>Mary Ann</h1>
-              <p1>{reviewText}</p1>
-            </div>
-            <div className="Review">
-              <div className="ReviewImage" style={{'backgroundImage':"url('images/girlsface.jpg')"}}>
-              </div>
-              <h1>Mary Ann</h1>
-              <p1>{reviewText}</p1>
-            </div>
+    var coolTech = "CoolTech's"
+    var exp = "experience . . . ."
+
+    var quote = "\"CoolTech's groundbreaking technology has redifined our sleeping " + exp + "\"";
+   
+      return (
+        <div id={"image-breaker-window"} data-parallax={"scroll"} data-position={"top"} data-bleed={"10"} data-natural-width={"1400"} data-natural-height={"900"}>
+          <div class="parallax-slider">
+            <h1>"{coolTech} groundbreaking technology has redefined our sleeping <br/>experience . . . ."</h1>
+            <button onMouseEnter={() => this.handleMouseEnter()} onMouseLeave={() => this.handleMouseLeave()}><h2>Read Reviews</h2><img src="images/thinarrow.png"/></button>
           </div>
-          <div id="ViewReviews">Read More Reviews</div>
         </div>
-        
-    );
-  }
+    	)
+  	}
 }
 
 module.exports = ReviewSection;
